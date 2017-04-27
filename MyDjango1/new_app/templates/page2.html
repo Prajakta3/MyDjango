@@ -1,0 +1,71 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css.map' %}">
+    <style>
+        th,td{
+        border : 3px solid black;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(162,47,128)">
+
+<table class="table table-bordered" style="background-color:rgb(255,77,77); border:2px solid black;">
+  <tr >
+      <th>First_name</th>
+      <th>Last_name</th>
+      <th>Add_line1</th>
+      <th>Add_line2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+
+  </tr>
+  {% for i in name %}
+  <tr >
+    <td>{{i.First_name}}</td>
+    <td>{{i.Last_name}}</td>
+    <td>{{i.Add_line1}}</td>
+    <td>{{i.Add_line2}}</td>
+    <td>{{i.City}}</td>
+    <td>{{i.State}}</td>
+    <td>{{i.Zip}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<table class="table table-bordered" style="background-color:rgb(255,77,77); border:2px solid black;" >
+  <tr >
+      <th>First_name</th>
+      <th>Last_name</th>
+      <th>Email</th>
+      <th>Phone</th>
+
+
+  </tr>
+  {% for a in name %}
+  <tr >
+    <td>{{a.First_name}}</td>
+    <td>{{a.Last_name}}</td>
+    <td>{{a.Email}}</td>
+      <td>{{a.Phone}}</td>
+  </tr>
+  {% endfor %}
+
+
+</table>
+
+
+
+</body>
+</html>

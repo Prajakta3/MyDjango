@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css.map' %}">
+
+</head>
+<body style="background-color:rgb(255,156,83) ">
+        <center><h1 style="color:red;"> My Django Project</h1></center>
+
+        <center><form class="navbar-form navbar-left" style="border:1px solid black" method="POST" action="">{% csrf_token %}
+             <div class="form-group">
+                  <label><strong>Name</strong></label><br>
+                  <input type="text" class="form-control" name="First_name" style="width:100px;" placeholder="First Name">
+                  <input type="text" class="form-control" name="Last_name"  placeholder="Last Name">
+             <br>
+             <br>
+                  <label><strong>Address</strong></label><br>
+                  <input type="text" class="form-control" name="Add_line1" style="width:380px;" placeholder="Street Address">
+             <br>
+
+                  <br><input type="text" class="form-control" name="Add_line2" style="width:380px;" placeholder="Street Address Line 2">
+             <br>
+             <br>
+                  <input type="text" class="form-control" name="City" style="width:190px;" placeholder="City">
+                  <input type="text" class="form-control" name="State" style="width:190px;" placeholder="State/Province">
+             <br>
+             <br>
+                  <input type="text" class="form-control" name="Zip" style="width:150px;" placeholder="Postal/Zip Code">
+             <br>
+             <br>
+                  <label><strong>E-mail</strong></label><br>
+                  <input type="text" class="form-control" name="Email" style="width:390px;" placeholder="ex:myname@example.com">
+             <br>
+
+             <br><p>
+                  <label><strong>Phone Number</strong></label><br>
+
+
+                  <input type="text" class="form-control" name="Phone" style="width:190px;" placeholder="Phone Number">
+             </p>
+             </div>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+        </form></center>
+</body>
+</html>
